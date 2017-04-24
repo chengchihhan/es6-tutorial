@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/chengchihhan/es6-tutorial/issues"
   },
-  "homepage": "https://github.com/chengchihhan/es6-tutorial#readme"
+  "homepage": "https://github.com/chengchihhan/es6-tutorial#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1"
+  }
 }

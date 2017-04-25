@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Omygod",
+    "sex": "male",
+    "years": "30"
+  },
+  {
+    "name": "Madbitch",
+    "sex": "female",
+    "years": "20"
+  },
+  {
+    "name": "SpongeBob",
+    "sex": "undefined",
+    "years": "15"
+  }
+]

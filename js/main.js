@@ -1,8 +1,8 @@
 function sayHi() {
-    var firstName = document.getElementById('first-name').value;
-    var lastName = document.getElementById('last-name').value;
+    let firstName = document.getElementById('first-name').value;
+    let lastName = document.getElementById('last-name').value;
 
-    var html = 'Hello <em>' + firstName + '</em> ' + lastName;
+    let html = 'Hello <em>' + firstName + '</em> ' + lastName;
 
     document.getElementById('result').innerHTML = html;
 }

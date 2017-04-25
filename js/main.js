@@ -1,4 +1,4 @@
-function sayHi() {
+const sayHi = () => {
   let firstName = document.getElementById('first-name').value;
   let lastName = document.getElementById('last-name').value;
 

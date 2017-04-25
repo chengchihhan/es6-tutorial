@@ -1,10 +1,10 @@
-function sayHi() {
-  var firstName = document.getElementById('first-name').value;
-  var lastName = document.getElementById('last-name').value;
+let url = "info.json";
 
-  var html = 'Hello <em>' + firstName + '</em> ' + lastName;
-
-  document.getElementById('result').innerHTML = html;
-}
-
-document.getElementById('say').addEventListener('click', sayHi, false);
+fetch(url)
+  .then(response => response.json())
+  .then(info => {
+    let html = "";
+    info.forEach(info => html += `<tr><td>${info.name}</td><td>${info.sex}</td><td>${info.years}</td></tr>`);
+    document.getElementById('info').innerHTML = html;
+  })
+  .catch(e => console.log(e));

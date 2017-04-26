@@ -8,5 +8,5 @@ document.getElementById('calcBtn').addEventListener('click', () => {
   let y = document.getElementById('y').value;
   let z = document.getElementById('z').value;
   let space = new Space(x, y, z);
-  document.getElementById('volumeEqual').innerHTML = x * y * z;
+  document.getElementById('volumeEqual').innerHTML = space.volume;
 });

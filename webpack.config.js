@@ -7,7 +7,7 @@ module.exports = {
     ratefinder: './js/ratefinder.js'
   },
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.resolve(__dirname, 'build'),
     filename: '[name].bundle.js'
   },
   module: {

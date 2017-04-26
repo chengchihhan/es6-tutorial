@@ -18,3 +18,13 @@ mock.findAll()
     document.getElementById('test').innerHTML = html;
   })
   .catch(e => console.log(e));
+
+const promises = [
+  new Promise(resolve => setTimeout(resolve, 0, 1)),
+  new Promise(resolve => setTimeout(resolve, 0, 2))
+];
+
+Promise.all(promises)
+  .then(promises => {
+    console.log('value', promises.join('and'));
+  });

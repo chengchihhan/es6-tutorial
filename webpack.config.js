@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './js/main.js',
+  entry: ['babel-polyfill', './js/main.js'],
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'main.bundle.js'
@@ -13,8 +13,12 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015']
-        }
+          plugins: ['transform-runtime'],
+          presets: ['es2015', 'stage-0'],
+        },
+        exclude: [
+          path.resolve(__dirname, "node_modules"),
+        ],
       }
     ]
   },

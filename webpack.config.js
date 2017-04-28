@@ -13,7 +13,7 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         query: {
-          plugins: ['transform-runtime'],
+          plugins: ['transform-runtime', "transform-decorators-legacy"],
           presets: ['es2015', 'stage-0'],
         },
         exclude: [

@@ -1,24 +1,28 @@
-let test = [
+const test = [
   {
-    "name": "XXXXX",
-    "sex": "male",
-    "years": "30"
+    name: 'XXXXX',
+    sex: 'male',
+    years: 30
   },
   {
-    "name": "QQQQQ",
-    "sex": "female",
-    "years": "20"
+    name: 'QQQQQ',
+    sex: 'female',
+    years: 20
   },
   {
-    "name": "BBBBB",
-    "sex": "undefined",
-    "years": "15"
+    name: 'BBBBB',
+    sex: 'undefined',
+    years: 15
   }
 ];
 
-export let findAll = () => new Promise((resolve, reject) => {
-  if (test) {
-    resolve(test);
-  };
-  reject("No test");
-})
+function findAll() {
+  return new Promise((resolve, reject) => {
+    if (test) {
+      resolve(test);
+    }
+    return reject('oh nonono!');
+  });
+}
+
+export { test, findAll };

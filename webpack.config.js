@@ -1,5 +1,5 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: ['babel-polyfill', './js/main.js'],
@@ -8,11 +8,12 @@ module.exports = {
     filename: 'main.bundle.js'
   },
   module: {
-    preLoaders: [
+    rules: [
       {
         test: /\.js?$/,
+        enforce: 'pre',
         exclude: /node_modules/,
-        loader: 'eslint'
+        loader: 'eslint-loader'
       }
     ],
     loaders: [
@@ -24,7 +25,7 @@ module.exports = {
           presets: ['es2015', 'stage-0'],
         },
         exclude: [
-          path.resolve(__dirname, "node_modules"),
+          path.resolve(__dirname, 'node_modules'),
         ],
       }
     ]

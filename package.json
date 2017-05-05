@@ -6,7 +6,8 @@
   "scripts": {
     "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
     "clean": "rm -rf build",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --hot --inline",
+    "lint": "eslint -c .eslintrc js",
     "webpack": "webpack"
   },
   "repository": {

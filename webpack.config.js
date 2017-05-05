@@ -31,6 +31,10 @@ module.exports = {
           presets: ['es2015', 'stage-0'],
         },
         exclude: /node_modules/,
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
   },
@@ -42,7 +46,7 @@ module.exports = {
     hot: true,
     // enable HMR on the server
 
-    contentBase: path.join(__dirname, '/'),
+    contentBase: path.join(__dirname, 'build'),
     // match the output path
 
     publicPath: '/'
